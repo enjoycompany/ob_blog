@@ -1,7 +1,7 @@
 $baseFontFamily: Oxygen;
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
 @import 'bootstrap';
-@import 'bootstrap-responsive';
+
 $navbarBackgroundHighlight: white;
 $navbarBackground: white;
 body{
@@ -17,7 +17,7 @@ body{
 	background-color: #fdefc8;
 	color: #000;
 	height: 100px;
-	padding-left: 33%;
+	padding-left: 40%;
 	font-size: 0.8em;
 	margin-top: 50px;
 	width: 100%;
@@ -30,3 +30,45 @@ body{
 	@include box-shadow(none !important);
 	border: 0;
 }
+
+.navbar {
+	background-color: #669900;
+}
+
+	.span8{
+		background-color: #66cc00;
+		padding-left: 15px;
+	}
+
+h1{
+	color:#6e6e6e;
+  }
+	#header{
+		height:53px;
+		background-color: green;
+		border-bottom:1px solid #191919;
+		z-index:100;
+		line-height:53px;
+		margin-bottom:1px;
+		display: block;
+	}
+	.navbar{
+		color: #66cc00;
+	}
+	.navbar a {
+		color: #6e6e6e;
+	}
+	.navbar hover {
+		color: #66cc00 ;
+	}
+	.btn btn-primary
+	{
+  background-color: green;
+	}
+	h2{
+		color: green;
+	}
+	h4{
+		color: green;
+		}
+	@import  'bootstrap-responsive';
