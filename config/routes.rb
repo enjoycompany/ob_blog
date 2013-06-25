@@ -1,4 +1,7 @@
 OBBlog::Application.routes.draw do
+  resources :posts
+
+
   devise_for :users
   #match 'users/:id' => 'users#show', as: :user
   root :to => 'pages#home'
