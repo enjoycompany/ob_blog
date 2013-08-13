@@ -1,9 +1,12 @@
+<% @post.tags.build %>
 <%= simple_form_for(@post, html: {class: "form-horizontal"}) do |f| %>
   <%= f.error_notification %>
 
   
     <%= f.input :topic, as: :text, input_html: { rows: "2"} %>
     <%= f.input :body %>
+
+    <%= render :partial => "tags/form", :locals => {:form => f } %>
   
 
   <div class="form-actions">

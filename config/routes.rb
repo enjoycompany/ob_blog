@@ -1,6 +1,7 @@
 OBBlog::Application.routes.draw do
-  resources :posts
-
+  resources :posts do
+    resources :comments
+  end
 
   devise_for :users
   #match 'users/:id' => 'users#show', as: :user

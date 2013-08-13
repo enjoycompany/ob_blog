@@ -9,12 +9,16 @@
 <p>
     <%= @post.body %>
 </p>
+<%= @post.tags.map(&:name).join(", ") %>
+
+<%= render @post.comments %>
+<%= render "comments/form" %>
 <p> Post created by: <%= @post.user.name %>
 	</p>
  <%= link_to 'Edit Post', edit_post_path(@post) %> |
- <%= link_to 'Back to Posts', posts_path %> 
+ <%= link_to 'Back to Posts', posts_path %> |
  <%= link_to 'New Post', new_post_path %>
-	</div
+	</div>
  </div>
 </div>
  

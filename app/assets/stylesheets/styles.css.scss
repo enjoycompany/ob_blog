@@ -1,14 +1,35 @@
-$baseFontFamily: Oxygen;
-@import url(http://fonts.googleapis.com/css?family=Oxygen);
+$baseFontFamily: Tangerine;
+@import url(http://fonts.googleapis.com/css?family=Inconsolata|Droid+Sans);
 @import 'bootstrap';
 
 $navbarBackgroundHighlight: white;
 $navbarBackground: white;
+
+// rounded corners
+@mixin rounded($radius: 0.5em) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-khtml-border-radius: $radius;
+	border-radius: $radius;
+
+	//for accessability
+}
+@mixin hide() {
+	display: none;
+}
+
+// unhide accessible content
+@mixin unhide() {
+	position: static;
+}
 body{
 	padding-top: 200px;
 	background-color: #fff;
-	font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
+	font-family: 'Inconsolata', 'Droid+Sans';
+	 font-size: 48px;
   font-size: 0.81em;
+  margin-left: 20px;
+  
   color:#6e6e6e;
   display: table;
 }
@@ -17,7 +38,6 @@ body{
 	background-color: #fdefc8;
 	color: #000;
 	height: 100px;
-	padding-left: 40%;
 	font-size: 0.8em;
 	margin-top: 50px;
 	width: 100%;
@@ -25,21 +45,48 @@ body{
 	color: $gray;
    }
 }
+.copyright{
+	width: 100%;
+	padding-left: 40%;
+	background-color: green; opacity: 0.5;
+	-webkit-opacity: 0.5;
+-moz-opacity: 0.5;
+opacity: 0.5;
+  color:#fff;
+	}
 .navbar-inner{
 
 	@include box-shadow(none !important);
 	border: 0;
+
 }
 
 .navbar {
 	background-color: #669900;
+	
 }
 
 	.span8{
 		background-color: #66cc00;
 		padding-left: 15px;
 	}
+	.hero-unit{
+		padding: 15px;
+	}
+.content{
+	padding-left: 220px;
 
+}
+.img-circle {
+
+a img-circle {
+position: relative;
+top: 5px;
+margin-top: -5px;
+border: 0;
+}
+
+}
 h1{
 	color:#6e6e6e;
   }
@@ -61,14 +108,19 @@ h1{
 	.navbar hover {
 		color: #66cc00 ;
 	}
-	.btn btn-primary
-	{
-  background-color: green;
+	.btn btn-primary{
+	 background-color: green;
 	}
 	h2{
 		color: green;
+		text-shadow: 3px 3px 3px #aaa;
 	}
 	h4{
 		color: green;
+		text-shadow: 3px 3px 3px #aaa;
+		}
+	h3{
+		color: green;
+			text-shadow: 3px 3px 3px #aaa;
 		}
 	@import  'bootstrap-responsive';

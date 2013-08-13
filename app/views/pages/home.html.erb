@@ -1,21 +1,28 @@
 <% if user_signed_in? %>
-<h2> You are Logged In</h2>
-<div class="hero-unit">
+<h4> You are Logged In</h4>  <h3><%= link_to 'Create a New Post', new_post_path %> </h3>
+<div class="hero-unit" style="overflow: auto;">	<div class="thumbnail span2" style="margin-left: 20px;">
+
+   <%= image_tag("henry.jpg", class: "img-circle",  :alt => "tweed valley wildlife carers, rescued swamp wallaby joey") %>
+  
+</div>
+<div class = "content">
 	<h3> Welcome to the TVWC Committee Member's Private Site!</h3>
-	<p> TVWC committee members can use this website to discuss TVWC issues, make suggestions and keep track of ongoing matters. It will hopefully assist in maintaining records and make it easier for office bearers to keep up to date with what is going on and to keep track of ongoing dicussions. 
-	If this site is successful we can expand it to include a member's version with a section for phonies where rosters can be posted and communication between phonies and cordinaters can be streamlined.</p> <br/>
+	<p> TVWC office bearer's can use this weblog to discuss TVWC issues, make suggestions and keep track of ongoing matters. 	If this site is successful we can expand it to include a member's version with a section for phonies where rosters can be posted and communication between phonies and cordinaters can be streamlined.</p> <br/>
+	<p> This is a custom designed weblog that can only be used by office bearers. If you are an TVWC office bearer you need to use the email address the group has on record for you, otherwise you will not be able to sign up and use this site. The sign up only accepts specific email addresses to prevent unauthorised access, keeping the imformation contained in posts private. Unauthorised users can only see a simple home page. which includes a link to our public website. Once a user has signed up and logged in, the site content becomes available and users can create, read, edit and delete posts. Users can only edit and delete their own posts. Please note that when a post is deleted, all the comments and images associated with that post is also deleted, so tread carefully and good luck.</p> 
 	
 	<p>A links page will contain links to sites relevant to TVWC similar to our links page on the public site. Eventually users will be able to add links to this page.</p>
  
  <p>A documents page will allow the upload of documents for reference so that users can conveniently cite from the docs page in posts.</p>
 </div>
-<%= link_to 'New Post', new_post_path %>
+</div>
+
 <%else%>
 <div class="hero-unit">
 	<h2>TVWC Office Bearer's Blog</h2>
 <p><%= link_to "TVWC Public Website", "http://tvwc.org.au" %></p>
 <h4>	If you are a TVWC Office bearer 
 	<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-success" %></h4>
+	<p> Please note that only authorised TVWC office bearer's can sign up to use this weblog</p> 
 	
 </div>
 <%end%>

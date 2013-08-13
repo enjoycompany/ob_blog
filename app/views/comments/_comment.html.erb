@@ -1,0 +1,6 @@
+<p>
+	<%= comment.body + "(#{comment.created_at})" %>
+	</p>
+	<p>
+		<%= link_to "Edit", [comment.post, comment], :confirm => "are you sure?", :method => :delete %>
+ </p>
